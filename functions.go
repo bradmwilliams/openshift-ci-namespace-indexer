@@ -54,7 +54,7 @@ type GCSEvent struct {
 	// ResourceState string `json:"resourceState"`
 }
 
-// IndexJobsByNamespace creates a index of all jobs within
+// TestPlatformResultsIndexJobsByNamespace creates a index of all jobs within
 // a bucket by the work namespace for the jobs. Jobs that have completed are linked from
 //
 //   gs://BUCKET/index/job-namespace/JOB_NAME/BUILD_NUMBER
@@ -66,7 +66,7 @@ type GCSEvent struct {
 //
 // Readers should not assume anything about the contents of the
 // object or that the link is in the same bucket.
-func IndexJobsByNamespace(ctx context.Context, e GCSEvent) error {
+func TestPlatformResultsIndexJobsByNamespace(ctx context.Context, e GCSEvent) error {
 	base := path.Base(e.Name)
 	switch base {
 	case "finished.json":
