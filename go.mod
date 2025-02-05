@@ -1,6 +1,6 @@
 module github.com/abhinavdahiya/openshift-ci-namespace-indexer
 
-go 1.23
+go 1.21
 
 require (
 	cloud.google.com/go/storage v1.6.0
